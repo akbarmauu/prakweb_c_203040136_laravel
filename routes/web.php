@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home',[
-        "title" => "home"
+        "title" => "Home"
     ]);
 });
 
@@ -35,7 +35,7 @@ Route::get('/blog', function () {
     $blog_posts = [
         [
             "title" => "Judul Post Pertama",
-            "slug" => "Judul-post-pertama",
+            "slug" => "judul-post-pertama",
             "author" => "Akbar Maulana",
             "body" => "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam ex saepe dignissimos dolorum, neque, repudiandae laudantium odio aut omnis facere corporis molestiae doloribus praesentium quam rem magnam suscipit quaerat magni! Iste odit molestias recusandae tempora cum beatae aperiam architecto reprehenderit illum rerum commodi laboriosam, consectetur, magni aliquid, officiis distinctio exercitationem! Voluptate iste esse est adipisci exercitationem minus? Quibusdam laborum quidem eos, eius, accusantium, exercitationem totam minus nemo pariatur tempore quia enim omnis nisi sequi repellat! Consequatur, officia. Rem, inventore suscipit."
         ],
@@ -58,7 +58,7 @@ Route::get('posts/{slug}', function($slug) {
     $blog_posts = [
         [
             "title" => "Judul Post Pertama",
-            "slug" => "Judul-post-pertama",
+            "slug" => "judul-post-pertama",
             "author" => "Akbar Maulana",
             "body" => "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam ex saepe dignissimos dolorum, neque, repudiandae laudantium odio aut omnis facere corporis molestiae doloribus praesentium quam rem magnam suscipit quaerat magni! Iste odit molestias recusandae tempora cum beatae aperiam architecto reprehenderit illum rerum commodi laboriosam, consectetur, magni aliquid, officiis distinctio exercitationem! Voluptate iste esse est adipisci exercitationem minus? Quibusdam laborum quidem eos, eius, accusantium, exercitationem totam minus nemo pariatur tempore quia enim omnis nisi sequi repellat! Consequatur, officia. Rem, inventore suscipit."
         ],
@@ -70,12 +70,12 @@ Route::get('posts/{slug}', function($slug) {
         ],
     ];
 
-        $new_post = [];
-        foreach ($blog_posts as $post) {
-            if($post["slug"] === $slug) {
-                $new_post = $post;
-            }
-        }
+    $new_post = [];
+    foreach($blog_posts as $post) {
+    if($post["slug"] === $slug) {
+         $new_post = $post;
+     }
+}
 
     return view('post', [
         "title" => "Single Post",
