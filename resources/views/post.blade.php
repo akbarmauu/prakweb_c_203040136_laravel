@@ -2,7 +2,7 @@
 
 @section('container')
 
-  <div class="container">
+<div class="container">
   <div class="row justify-content-center mb-5">
     <div class="col-md-8">
       <h2 class="mb-3">{{ $post->title }}</h2>
@@ -16,7 +16,7 @@
   <a href="/blog" class="text-decoration-none d-block mt-4">Back to Posts</a>
     </div>
   </div>  
-  </div>
+</div>
 
 
   
