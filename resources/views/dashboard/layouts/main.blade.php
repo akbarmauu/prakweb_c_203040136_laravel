@@ -13,6 +13,15 @@ integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WT
     
     <!-- Custom styles for this template -->
     <link href="/css/dashboard.css" rel="stylesheet">
+    <!-- TRIX EDITOR -->
+    <link rel="stylesheet" type="text/css" href="/css/trix.css">
+    <script type="text/javascript" src="/js/trix.js"></script>
+
+    <style>
+      trix-toolbar [data-trix-button-group="file-tools"] {
+        display: none;
+      }
+    </style>
   </head>
   <body>
     
